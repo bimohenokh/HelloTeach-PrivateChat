@@ -1,13 +1,13 @@
 import moment from 'moment';
 
-export const protectFromXSS = (text) => {
-    return text
-        .replace(/\&/g, '&amp;')
-        .replace(/\</g, '&lt;')
-        .replace(/\>/g, '&gt;')
-        .replace(/\"/g, '&quot;')
-        .replace(/\'/g, '&apos;');
-};
+// export const protectFromXSS = (text) => {
+//     return text
+//         .replace(/\&/g, '&amp;')
+//         .replace(/\</g, '&lt;')
+//         .replace(/\>/g, '&gt;')
+//         .replace(/\"/g, '&quot;')
+//         .replace(/\'/g, '&apos;');
+// };
 
 export const timestampToTime = (timestamp) => {
     const now = new Date().getTime();

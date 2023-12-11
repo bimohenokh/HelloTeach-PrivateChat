@@ -298,7 +298,7 @@ const Message = ({ message, handleDeleteMessage, messageSentByYou }) => {
                     <div className="message-sender-name">{message.sender.nickname}{' '}</div>
                     <div>{timestampToTime(message.createdAt)}</div>
                 </div>
-                <img src={message.url} />
+                <img src={message.url}  alt={""}/>
             </div >);
     }
     const messageSentByCurrentUser = message.sender.userId === sb.currentUser.userId;
@@ -312,7 +312,7 @@ const Message = ({ message, handleDeleteMessage, messageSentByYou }) => {
                 </div>
                 {messageSentByCurrentUser &&
                     <div>
-                        <button className="control-button" onClick={() => handleDeleteMessage(message)}><img className="message-icon" src='/icon_delete.png' /></button>
+                        <button className="control-button" onClick={() => handleDeleteMessage(message)}><img className="message-icon" src='/icon_delete.png'  alt={""}/></button>
                     </div>}
             </div>
             <div>{message.message}</div>
@@ -322,7 +322,7 @@ const Message = ({ message, handleDeleteMessage, messageSentByYou }) => {
 
 const ProfileImage = ({ user }) => {
     if (user.plainProfileUrl) {
-        return <img className="profile-image" src={user.plainProfileUrl} />
+        return <img className="profile-image" src={user.plainProfileUrl}  alt={""}/>
     } else {
         return <div className="profile-image-fallback">{user.nickname.charAt(0)}</div>;
     }
