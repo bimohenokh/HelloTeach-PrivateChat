@@ -205,6 +205,7 @@ const PrivateChat = (props) => {
     );
 };
 
+
 // Chat UI Components
 const ChannelList = ({
     channels,
