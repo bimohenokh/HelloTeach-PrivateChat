@@ -136,7 +136,6 @@ const PrivateChat = (props) => {
 
     const setupUser = async () => {
 
-        // TODO ntar ganti jadi parameter
         const userIdCurrent = idUserParam;
 
         const sendbirdChat = await SendbirdChat.init({
@@ -185,7 +184,7 @@ const PrivateChat = (props) => {
             />
             <Channel
                 currentlyJoinedChannel={state.currentlyJoinedChannel}
-                handleDeleteChannel={handleDeleteChannel} // TODO: ubah jadi end channel
+                handleDeleteChannel={handleDeleteChannel}
                 channelRef={channelRef}
             >
                 <MessagesList
